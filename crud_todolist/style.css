@@ -252,50 +252,7 @@ body {
 
 /* Checkbox */
 .task-checkbox {
-    width: 24px;
-    height: 24px;
-    border: 2px solid var(--border-color);
-    border-radius: 6px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    background: rgba(255, 255, 255, 0.05);
-    flex-shrink: 0;
-}
-
-.task-checkbox:hover {
-    border-color: var(--primary-color);
-}
-
-.task-checkbox input {
     display: none;
-}
-
-.task-checkbox input:checked + .checkmark {
-    background: var(--success-color);
-    border-color: var(--success-color);
-}
-
-.task-checkbox .checkmark {
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition);
-    cursor: pointer;
-    border: 2px solid var(--border-color);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.task-checkbox input:checked ~ .checkmark::after {
-    content: '✓';
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
 }
 
 /* Task Content */
@@ -360,6 +317,22 @@ body {
 .btn-delete:hover {
     background: rgba(239, 68, 68, 0.2);
     border-color: var(--danger-color);
+}
+
+.btn-complete {
+    color: var(--text-secondary);
+}
+
+.btn-complete:hover {
+    background: rgba(16, 185, 129, 0.2);
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.btn-complete.completed {
+    background: var(--success-color);
+    border-color: var(--success-color);
+    color: white;
 }
 
 /* Empty State */

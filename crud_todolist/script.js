@@ -1,5 +1,5 @@
 // API Base URL - Cambiar según la configuración
-const API_BASE = 'http://localhost/crud_todolist';
+const API_BASE = 'http://localhost/Base-de-datos-2/crud_todolist';
 
 // DOM Elements
 const taskInput = document.getElementById('taskInput');
@@ -208,19 +208,14 @@ function createTaskCard(task) {
     });
 
     card.innerHTML = `
-        <div class="task-checkbox">
-            <input 
-                type="checkbox" 
-                ${task.completed ? 'checked' : ''} 
-                onchange="toggleTask(${task.id})"
-            >
-            <div class="checkmark"></div>
-        </div>
         <div class="task-content">
             <div class="task-title">${escapeHtml(task.title)}</div>
             <div class="task-date">${createdAt}</div>
         </div>
         <div class="task-actions">
+            <button class="btn-icon btn-complete ${task.completed ? 'completed' : ''}" onclick="toggleTask(${task.id})" title="Marcar como completado">
+                ${task.completed ? '✓' : '◯'}
+            </button>
             <button class="btn-icon btn-edit" onclick="openEditModal(${task.id}, '${escapeHtml(task.title)}')">
                 ✏️
             </button>
