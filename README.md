@@ -1,5 +1,5 @@
 # Base-de-datos-2
-Ejercicio de CRUD para bases de datos
+Ejercicio de CRUD para clase de bases de datos
 
 Descripción
 -
